@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head><title>تسجيل الدخول</title></head>
+<body>
+    {% if register %}
+    <h2>تسجيل حساب جديد</h2>
+    <form method="post">
+        <input type="text" name="username" placeholder="اسم المستخدم" required>
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <button type="submit">تسجيل</button>
+    </form>
+    <a href="{{ url_for('auth.login') }}">لديك حساب؟ سجل الدخول</a>
+    {% else %}
+    <h2>تسجيل الدخول</h2>
+    <form method="post">
+        <input type="text" name="username" placeholder="اسم المستخدم" required>
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <button type="submit">دخول</button>
+    </form>
+    <a href="{{ url_for('auth.register') }}">مستخدم جديد؟ سجل هنا</a>
+    {% endif %}
+</body>
+</html>

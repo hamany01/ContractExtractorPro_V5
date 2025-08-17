@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head><title>لوحة التحكم</title></head>
+<body>
+    <h1>لوحة التحكم</h1>
+    <a href="{{ url_for('auth.logout') }}">تسجيل الخروج</a>
+    <a href="{{ url_for('main.upload') }}">رفع ملف</a>
+    <ul>
+    {% for doc in documents %}
+        <li>{{ doc.filename }} - {{ doc.result }}</li>
+    {% else %}
+        <li>لا توجد ملفات</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
