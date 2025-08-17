@@ -3,3 +3,5 @@ flask_sqlalchemy
 flask_login
 pandas
 openpyxl
+Flask==2.3.3
+gunicorn
